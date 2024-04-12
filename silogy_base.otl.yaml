@@ -1,0 +1,13 @@
+- name: verilator_build
+  rule: raw_bash_build
+  rule_args:
+    cmds:
+      - make
+
+- name: test
+  rule: raw_bash
+  rule_args:
+    deps:
+      - verilator_build
+    cmds:
+      - ./test_default.sh
