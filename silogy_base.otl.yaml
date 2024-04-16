@@ -4,7 +4,31 @@
     cmds:
       - make
 
-- name: test
+- name: test_0
+  rule: raw_bash
+  rule_args:
+    deps:
+      - verilator_build
+    cmds:
+      - ./test_default.sh
+
+- name: test_1
+  rule: raw_bash
+  rule_args:
+    deps:
+      - verilator_build
+    cmds:
+      - ./test_default.sh
+
+- name: test_2
+  rule: raw_bash
+  rule_args:
+    deps:
+      - verilator_build
+    cmds:
+      - ./test_default.sh
+
+- name: test_3
   rule: raw_bash
   rule_args:
     deps:
