@@ -10,6 +10,7 @@
     deps:
       - verilator_build
     cmds:
+      - sleep 5
       - ./test_default.sh
 
 - name: test_1
