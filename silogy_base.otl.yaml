@@ -11,7 +11,9 @@
       - verilator_build
     cmds:
       - sleep 5
-      - ./test_default.sh
+      - ./obj_dir/Vtop +trace
+    outputs:
+      waves: sim.vcd
 
 - name: test_1
   rule: raw_bash
@@ -19,7 +21,7 @@
     deps:
       - verilator_build
     cmds:
-      - ./test_default.sh
+      - ./obj_dir/Vtop +trace
 
 - name: test_2
   rule: raw_bash
@@ -27,7 +29,7 @@
     deps:
       - verilator_build
     cmds:
-      - ./test_default.sh
+      - ./obj_dir/Vtop +trace
 
 - name: test_3
   rule: raw_bash
