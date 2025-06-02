@@ -39,3 +39,13 @@
       - verilator_build
     cmds:
       - ./test_default.sh
+
+- name: sanity
+  rule: raw_bash
+  num_seed: 10
+  rule_args:
+    deps:
+      - verilator_build
+    cmds:
+      - echo $SMELT_SEED
+      - ./test_default.sh
