@@ -42,7 +42,7 @@
 
 - name: sanity
   rule: raw_bash
-  num_seed: 10
+  num_seeds: 10
   rule_args:
     deps:
       - verilator_build
